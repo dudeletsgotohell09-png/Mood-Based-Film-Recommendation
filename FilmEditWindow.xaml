@@ -1,0 +1,104 @@
+<Window x:Class="MoodFlick.Views.Pages.FilmEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Manage Film"
+        Height="650" Width="480"
+        WindowStartupLocation="CenterOwner"
+        ResizeMode="NoResize"
+        Background="{StaticResource Bg}">
+    <Grid Margin="24">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <!-- Header -->
+        <TextBlock x:Name="TxtHeader" Grid.Row="0" Text="Add New Film" FontSize="20" FontWeight="Bold" Foreground="{StaticResource PrimaryDk}" Margin="0,0,0,16"/>
+
+        <!-- Form fields Scrollable -->
+        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto" Margin="0,0,0,16">
+            <StackPanel Margin="0,0,8,0">
+                
+                <TextBlock Text="FILM TITLE *" Style="{StaticResource FieldLabel}"/>
+                <TextBox x:Name="TxtTitle" Margin="0,0,0,12"/>
+
+                <Grid Margin="0,0,0,12">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    
+                    <StackPanel Grid.Column="0" Margin="0,0,6,0">
+                        <TextBlock Text="RELEASE YEAR *" Style="{StaticResource FieldLabel}"/>
+                        <TextBox x:Name="TxtYear"/>
+                    </StackPanel>
+                    
+                    <StackPanel Grid.Column="1" Margin="6,0,0,0">
+                        <TextBlock Text="RATING (0.0 - 10.0)" Style="{StaticResource FieldLabel}"/>
+                        <TextBox x:Name="TxtRating"/>
+                    </StackPanel>
+                </Grid>
+
+                <TextBlock Text="GENRE (Q2) *" Style="{StaticResource FieldLabel}"/>
+                <ComboBox x:Name="CboGenre" Margin="0,0,0,12">
+                    <ComboBoxItem Content="Action"/>
+                    <ComboBoxItem Content="Comedy"/>
+                    <ComboBoxItem Content="Romantic"/>
+                    <ComboBoxItem Content="Horror"/>
+                    <ComboBoxItem Content="Thriller"/>
+                    <ComboBoxItem Content="Sci-Fi"/>
+                </ComboBox>
+
+                <TextBlock Text="LANGUAGE (Q3) *" Style="{StaticResource FieldLabel}"/>
+                <ComboBox x:Name="CboLanguage" Margin="0,0,0,12">
+                    <ComboBoxItem Content="English"/>
+                    <ComboBoxItem Content="Sinhala"/>
+                    <ComboBoxItem Content="Tamil"/>
+                    <ComboBoxItem Content="Korean"/>
+                    <ComboBoxItem Content="Hindi"/>
+                    <ComboBoxItem Content="Other"/>
+                </ComboBox>
+
+                <TextBlock Text="FILM ERA (Q4) *" Style="{StaticResource FieldLabel}"/>
+                <ComboBox x:Name="CboEra" Margin="0,0,0,12">
+                    <ComboBoxItem Content="2010s-Present"/>
+                    <ComboBoxItem Content="2000s"/>
+                    <ComboBoxItem Content="90's"/>
+                    <ComboBoxItem Content="80's"/>
+                    <ComboBoxItem Content="Before 80's"/>
+                </ComboBox>
+
+                <TextBlock Text="DIRECTOR" Style="{StaticResource FieldLabel}"/>
+                <TextBox x:Name="TxtDirector" Margin="0,0,0,12"/>
+
+                <TextBlock Text="CAST (comma separated)" Style="{StaticResource FieldLabel}"/>
+                <TextBox x:Name="TxtCast" Margin="0,0,0,12"/>
+
+                <!-- Mood Tags Multi-select -->
+                <TextBlock Text="ASSOCIATED MOOD TAGS (Q1) *" Style="{StaticResource FieldLabel}"/>
+                <WrapPanel x:Name="PnlMoods" Margin="0,0,0,12">
+                    <!-- Loaded dynamically in code-behind -->
+                </WrapPanel>
+
+                <TextBlock Text="STORYLINE / DESCRIPTION" Style="{StaticResource FieldLabel}"/>
+                <TextBox x:Name="TxtDescription" Height="80" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Auto" Margin="0,0,0,12"/>
+
+            </StackPanel>
+        </ScrollViewer>
+
+        <!-- Actions -->
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="Auto"/>
+            </Grid.ColumnDefinitions>
+            
+            <TextBlock x:Name="TxtError" Grid.Column="0" Foreground="{StaticResource Danger}" FontSize="12" VerticalAlignment="Center" TextWrapping="Wrap" Margin="0,0,12,0"/>
+            
+            <Button Grid.Column="1" Content="Cancel" Style="{StaticResource BtnSecondary}" Width="90" Height="36" Margin="0,0,10,0" Click="Cancel_Click"/>
+            <Button Grid.Column="2" Content="Save" Style="{StaticResource BtnPrimary}" Width="90" Height="36" Click="Save_Click"/>
+        </Grid>
+    </Grid>
+</Window>
