@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 18
+VisualStudioVersion = 18.6.11822.322 stable
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MoodFlick", "MoodFlick.csproj", "{A0DCFBE9-D9E5-AD09-CBA1-803C87C55792}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0DCFBE9-D9E5-AD09-CBA1-803C87C55792}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0DCFBE9-D9E5-AD09-CBA1-803C87C55792}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0DCFBE9-D9E5-AD09-CBA1-803C87C55792}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0DCFBE9-D9E5-AD09-CBA1-803C87C55792}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {87678D1E-7D36-4BD9-936D-B3352A586829}
+	EndGlobalSection
+EndGlobal
