@@ -40,31 +40,6 @@ MoodFlick operates on a clean relational schema containing:
 4.  `film_mood_map` (many-to-many relationship linking films to moods)
 5.  `quiz_history` (quiz logs for analytics)
 
-### The Priority-Weighted Selection Query
-The recommendation engine executes a weighted SQL query that adds matching scores for each matching parameter. Movies with the highest total score (max 15) are returned first, with movie rating used as a tie-breaker.
-
-```sql
-SELECT f.film_id, f.title, f.year, f.genre, f.language, f.rating, f.era, f.director, f.cast, f.description,
-       MAX(
-         (CASE WHEN m.mood_name = @mood THEN 8 ELSE 0 END) +
-         (CASE WHEN f.genre = @genre THEN 4 ELSE 0 END) +
-         (CASE WHEN f.language = @language THEN 2 ELSE 0 END) +
-         (CASE WHEN f.era = @era THEN 1 ELSE 0 END)
-       ) AS score,
-       GROUP_CONCAT(DISTINCT m.mood_name SEPARATOR ', ') AS moods
-FROM films f
-LEFT JOIN film_mood_map fmm ON f.film_id = fmm.film_id
-LEFT JOIN mood_tags m ON fmm.mood_id = m.mood_id
-WHERE m.mood_name = @mood
-   OR f.genre = @genre
-   OR f.language = @language
-   OR f.era = @era
-GROUP BY f.film_id
-ORDER BY score DESC, f.rating DESC;
-```
-
----
-
 ## 🚀 Getting Started
 
 ### Prerequisites
