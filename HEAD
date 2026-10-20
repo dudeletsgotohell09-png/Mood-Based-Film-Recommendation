@@ -1,0 +1,9 @@
+0000000000000000000000000000000000000000 e6360a37d6158926b1163e3cdb7677c44eb71489 dilshan <dilshanmindika@outlook.com> 1780048520 +0530	commit (initial): first commit
+e6360a37d6158926b1163e3cdb7677c44eb71489 0c39070f7c346406bfe983d9af2b1b4bbda58d3b dilshan <dilshanmindika@outlook.com> 1780059339 +0530	commit: feat: implement Db utility class for MySQL connectivity and schema initialization
+0c39070f7c346406bfe983d9af2b1b4bbda58d3b 6c2af35759c4b2c478f583e5db87650927328132 dilshan <dilshanmindika@outlook.com> 1780059802 +0530	commit: feat: implement profile management page for viewing and updating user details
+6c2af35759c4b2c478f583e5db87650927328132 8d26d87b0e042e2cb3e24571aeb83e464bb8261d dilshan <dilshanmindika@outlook.com> 1780068228 +0530	commit: feat: implement repository services and administrative CRUD functionality for film management
+8d26d87b0e042e2cb3e24571aeb83e464bb8261d e28fca6c9d9dbd08923189cc9a0d78ebc7b5defa dilshan <dilshanmindika@outlook.com> 1780084772 +0530	commit: feat: implement UI windows for user management, password changes, and password resets
+e28fca6c9d9dbd08923189cc9a0d78ebc7b5defa 38e29d3c52c89a097f0aa09b013d275ada4b437c dilshan <dilshanmindika@outlook.com> 1780103202 +0530	commit: feat: implement CatalogPage functionality for filtering, managing, and editing films
+38e29d3c52c89a097f0aa09b013d275ada4b437c 66a34e0372bddd317b288866865ec9ae7a18ce46 dilshan <dilshanmindika@outlook.com> 1780104125 +0530	commit: feat: implement change password window and associated navigation logic
+66a34e0372bddd317b288866865ec9ae7a18ce46 fa4d49091d7c00b73a5fd2306f98d32184927ff4 dilshan <dilshanmindika@outlook.com> 1780104382 +0530	commit: feat: implement user management windows for adding and editing user profiles
+fa4d49091d7c00b73a5fd2306f98d32184927ff4 50cb56fa44314688f220942c95d22cb7e5ffbd46 dilshan <dilshanmindika@outlook.com> 1780210487 +0530	commit: feat: implement recommendation page UI with quiz functionality and results view
